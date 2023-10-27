@@ -13,6 +13,7 @@ const passport=require('passport');
 const app = express();
 
 app.use(express.json());
+app.use(express.static({__dirname}/'public'));
 
 app.use(cookieSession({
     maxAge:24*60*60*1000,

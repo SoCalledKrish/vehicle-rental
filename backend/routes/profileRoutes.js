@@ -3,9 +3,10 @@ const passport=require('passport');
 
 const authcheck = (req,res,next)=>{
     if(!req.user){
-        res.redirect('/auth/google');
+        res.redirect('/auth');
     }
     next();
+    
 }
 
 router.get('/',authcheck, (req,res)=>{
